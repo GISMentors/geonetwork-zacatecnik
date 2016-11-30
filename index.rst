@@ -16,7 +16,17 @@
    Úvod
    ****
 
-.. todo:: doplnit
+`GeoNetwork open source <http://geonetwork-opensource.org/>`__ je
+vyvíjen organizací `FAO <http://www.fao.org>`__. Hlavním vývojářem je
+Jeroen Ticheler. *"The GeoNetwork project started out in year 2001 as
+a Spatial Data Catalogue System for the Food and Agriculture
+organisation of the United Nations (FAO), the United Nations World
+Food Programme (WFP) and the United Nations Environmental Programme
+(UNEP)."*
+
+Projekt je řízen a vyvíjen komunitou a `jejími přispěvateli
+<https://github.com/geonetwork/core-geonetwork/network/members>`__.
+
 
 .. only:: html
              
@@ -26,6 +36,8 @@
 
 .. toctree::
    :maxdepth: 2
+
+   instalace/index
 
 *******
 Dodatky

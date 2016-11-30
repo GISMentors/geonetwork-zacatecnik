@@ -1,0 +1,23 @@
+--------------------------------------------------------------------------------
+1 VFR file(s) will be processed...
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Downloading http://vdp.cuzk.cz/vymenny_format/soucasna/20161031_OB_531367_UKSH.xml.gz (/home/martin)...
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Processing /home/martin/20161031_OB_531367_UKSH.xml.gz (1 out of 1)...
+--------------------------------------------------------------------------------
+Processing layer Obce                 ...          1 features added
+Processing layer SpravniObvody        ...          0 features added
+Processing layer Mop                  ...          0 features added
+Processing layer Momc                 ...          0 features added
+Processing layer CastiObci            ...          1 features added
+Processing layer KatastralniUzemi     ...          1 features added
+Processing layer Zsj                  ...          1 features added
+Processing layer Ulice                ...          0 features added
+Processing layer Parcely              ...        398 features added
+Processing layer StavebniObjekty      ...        109 features added (15 without geometry)
+Processing layer AdresniMista         ...         75 features added
+--------------------------------------------------------------------------------
+Time elapsed: 1 sec
+--------------------------------------------------------------------------------
