@@ -1,19 +1,15 @@
 Instalace a základní konfigurace
 ================================
 
-Popis
------
-
-V rámci tohoto školení se seznámíme se základní instalací
-nástroje. Instalace je možná pomocí instalátoru, což je pro účely
-školení nejvhodnější forma. Instalace vyžaduje JRE
-(:wikipedia-en:`Java virtual machine`) verze 1.8. Pokud chce uživatel
-provádět i zásahy do programového kódu na úrovni tříd jazyka Java
-potřebuje JDK (:wikipedia-en:`Java Development Kit`) verze
-1.8. Většina zásahů však nevyžaduje programování s využitím jazyka
-:wikipedia:`Java <Java (programovací jazyk)>`, ale s využitími zejména
-jazyků :wikipedia:`XML` a :wikipedia:`XSLT`.  Instalace je možná také
-s využitím archiv :wikipedia:`WAR <WAR (file format)>`, zde je však
+Instalace je možná pomocí instalátoru, což je pro účely školení
+nejvhodnější forma. Instalace vyžaduje JRE (:wikipedia-en:`Java
+virtual machine`) verze 1.8. Pokud chce uživatel provádět i zásahy do
+programového kódu na úrovni tříd jazyka Java potřebuje JDK
+(:wikipedia-en:`Java Development Kit`) verze 1.8. Většina zásahů však
+nevyžaduje programování s využitím jazyka :wikipedia:`Java <Java
+(programovací jazyk)>`, ale s využitími zejména jazyků
+:wikipedia:`XML` a :wikipedia:`XSLT`.  Instalace je možná také s
+využitím archiv :wikipedia:`WAR <WAR (file format)>`, zde je však
 nutná existence (instalace) servlet kontejneru
 např. :wikipedia:`Apache Tomcat` nebo :wikipedia-en:`JBoss <JBoss
 Enterprise Application Platform>`. Instalace je také možná ze

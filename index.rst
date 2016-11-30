@@ -24,7 +24,7 @@ organisation of the United Nations (FAO), the United Nations World
 Food Programme (WFP) and the United Nations Environmental Programme
 (UNEP)."*
 
-Projekt je řízen a vyvíjen komunitou a `jejími přispěvateli
+Projekt je řízen a vyvíjen komunitou a `jeho přispěvateli
 <https://github.com/geonetwork/core-geonetwork/network/members>`__.
 
 
@@ -38,7 +38,8 @@ Projekt je řízen a vyvíjen komunitou a `jejími přispěvateli
    :maxdepth: 2
 
    instalace/index
-
+   metadata/index
+   
 *******
 Dodatky
 *******
