@@ -11,7 +11,10 @@
    <http://gismentors.cz/skoleni/qgis>`_ | `PostGIS
    <http://gismentors.cz/skoleni/postgis>`_ | `GeoPython
    <http://gismentors.cz/skoleni/geopython>`_
-   
+
+.. warning:: Pracovní nedokončená verze materiálů vycházející z
+   `následujícího dokumentu <_static/GN_pracovni.odt>`__.
+
    ****
    Úvod
    ****

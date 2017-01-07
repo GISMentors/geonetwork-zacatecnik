@@ -1,2 +1,2 @@
-Validace
-========
+Validace metadat
+================
