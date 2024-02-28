@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Editace metadat dle ISO 19115 (ISO 19119) &#8212; Školení GeoNetwork pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Validace metadat" href="validace.html" />
+    <link rel="prev" title="Hledání v metadatech" href="hledani.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GeoNetwork pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="hledani.html" title="Hledání v metadatech"
+             accesskey="P">předchozí</a> |
+          <a href="validace.html" title="Validace metadat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="editace-metadat-dle-iso-19115-iso-19119">
+<h1>Editace metadat dle ISO 19115 (ISO 19119)<a class="headerlink" href="#editace-metadat-dle-iso-19115-iso-19119" title="Permalink to this heading">¶</a></h1>
+<p>Seznámíme se s editací (vytvářením) metadat pro popis dat a služeb
+(případně map nebo jiných typů dokumentů). Tutoriál zahrnuje vytvoření
+popisu pro jednu datovou sadu a jednu službu s tím, že se detailně
+projdou všechny položky, které je možné definovat. Součástí nástroje
+je možné vytvořená metadata ukládat jako nové šablony, které pak mohou
+další uživatelé využívat pro popis dalších zdrojů. Ukážeme si jak
+spravovat šablony pro vytváření metadat.</p>
+<section id="uzivatele-a-skupiny">
+<h2>Uživatelé a skupiny<a class="headerlink" href="#uzivatele-a-skupiny" title="Permalink to this heading">¶</a></h2>
+<p>Je možné vytvářet uživatele a skupiny uživatelů.</p>
+<figure class="align-center">
+<img alt="../_images/uzivatele.png" class="small" src="../_images/uzivatele.png" />
+</figure>
+<p>Každého uživatele je možné zařadit v různých rolích do různých
+skupin. Případně je možné nastavit uživatele jakožto administrátora.</p>
+<figure class="align-center">
+<img alt="../_images/uzivatele-role.png" src="../_images/uzivatele-role.png" />
+</figure>
+<p>Ke každému záznamu je možné nastavit následující přístupová práva. K
+nastavení se dostaneme přes Contribute (bez výběru podmnožiny).</p>
+<figure class="align-center">
+<img alt="../_images/uzivatele-contribute.png" src="../_images/uzivatele-contribute.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/uzivatele-privileges.png" src="../_images/uzivatele-privileges.png" />
+</figure>
+</section>
+<section id="verejne-a-neverejne-zaznamy">
+<h2>Veřejné a neveřejné záznamy<a class="headerlink" href="#verejne-a-neverejne-zaznamy" title="Permalink to this heading">¶</a></h2>
+<p>Přístup je možné řešit s využitím skupin a práv k záznamům.</p>
+<section id="neverejna-sekce-pro-editory">
+<h3>Neveřejná sekce pro editory<a class="headerlink" href="#neverejna-sekce-pro-editory" title="Permalink to this heading">¶</a></h3>
+<p>Prakticky lze řešit na úrovni <a class="reference external" href="https://cs.wikipedia.org/wiki/XSLT">XSLT</a>, která načítá šablonu
+a řadí sekce dle potřeby.</p>
+</section>
+</section>
+<section id="popis-aplikaci-negrafickych-a-nestrukturovanych-dat">
+<h2>Popis aplikací, negrafických a nestrukturovaných dat<a class="headerlink" href="#popis-aplikaci-negrafickych-a-nestrukturovanych-dat" title="Permalink to this heading">¶</a></h2>
+<p>Je to možné na úrovni <a class="reference external" href="https://cs.wikipedia.org/wiki/Dublin Core">Dublin Core</a> a přiřazení záznamu do
+kategorie. Jinak by se musela nachystat šablona, pro popis.</p>
+<figure class="align-center">
+<img alt="../_images/aplikace.png" src="../_images/aplikace.png" />
+</figure>
+</section>
+<section id="hierarchie">
+<h2>Hierarchie<a class="headerlink" href="#hierarchie" title="Permalink to this heading">¶</a></h2>
+<p>K dispozici je přidání vazby na rodiče, službu, datovou sadu, feature
+catalog, jiný zdroj (tedy třeba i v aplikaci) a dokument.</p>
+<figure class="align-center">
+<img alt="../_images/hierarchie.png" class="small" src="../_images/hierarchie.png" />
+</figure>
+<p>K dispozici je následující pohled pro hiearchii data-služba-aplikace
+(n:n) u záznamu v každé této úrovni.</p>
+<figure class="align-center">
+<img alt="../_images/hierarchie-download.png" src="../_images/hierarchie-download.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/hierarchie-resources.png" src="../_images/hierarchie-resources.png" />
+</figure>
+</section>
+<section id="popis-serii-dlazdic">
+<h2>Popis sérií (dlaždic)<a class="headerlink" href="#popis-serii-dlazdic" title="Permalink to this heading">¶</a></h2>
+<p>Vychází se z ISO 19115 (19139). Vytvoříme mateřský popis, kde budou
+obecná metadata pro celou sérii a pak vytváříme potomky tohoto popisu.</p>
+<figure class="align-center">
+<img alt="../_images/dataset-create.png" src="../_images/dataset-create.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/dataset-quality.png" src="../_images/dataset-quality.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/dataset-metadata.png" src="../_images/dataset-metadata.png" />
+</figure>
+<p>Pak můžeme vytvářet potomky tohoto popisu.</p>
+<figure class="align-center">
+<img alt="../_images/dataset-tree.png" src="../_images/dataset-tree.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/dataset-child.png" src="../_images/dataset-child.png" />
+</figure>
+<p>Popis se nám zkopíruje z rodiče a můžeme přepsat některé prvky.</p>
+<figure class="align-center">
+<img alt="../_images/dataset-child-ident.png" src="../_images/dataset-child-ident.png" />
+</figure>
+<p>Např. Extent.</p>
+<figure class="align-center">
+<img alt="../_images/dataset-extent.png" src="../_images/dataset-extent.png" />
+</figure>
+<p>Nebo informaci o kvalitě.</p>
+<figure class="align-center">
+<img alt="../_images/dataset-child-quality.png" src="../_images/dataset-child-quality.png" />
+</figure>
+<p>Pak přidáme vazbu na rodiče.</p>
+<figure class="align-center">
+<img alt="../_images/dataset-parents.png" class="small" src="../_images/dataset-parents.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/dataset-parents-link.png" src="../_images/dataset-parents-link.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/dataset-parents-metadata.png" class="small" src="../_images/dataset-parents-metadata.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/dataset-child-metadata.png" src="../_images/dataset-child-metadata.png" />
+</figure>
+<p>A ta se projeví i u rodiče v seznamu asociovaných zdrojů.</p>
+<figure class="align-center">
+<img alt="../_images/dataset-kolekce.png" src="../_images/dataset-kolekce.png" />
+</figure>
+<p>Při změně u rodiče nedojde automaticky ke změně u potomka. Pokud je
+změna nutná (např.) změna u kontaktního místa je nutné použít <em>Batch
+update</em>.</p>
+</section>
+<section id="batch-update">
+<h2>Batch update<a class="headerlink" href="#batch-update" title="Permalink to this heading">¶</a></h2>
+<figure class="align-center">
+<img alt="../_images/batch-0.png" class="small" src="../_images/batch-0.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/batch-1.png" src="../_images/batch-1.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/batch-2.png" src="../_images/batch-2.png" />
+</figure>
+<figure class="align-center">
+<img alt="../_images/batch-3.png" src="../_images/batch-3.png" />
+</figure>
+</section>
+<section id="vicejazycna-metadata">
+<h2>Vícejazyčná metadata<a class="headerlink" href="#vicejazycna-metadata" title="Permalink to this heading">¶</a></h2>
+<p>Vícejazyčná metadata pořizovat lze i když ne vždy bez problémů. Občas
+končil GeoNetwork chybou. K dispozici je šablona, která toto umožňuje.</p>
+<div class="admonition-todo admonition" id="id1">
+<p class="admonition-title">Todo</p>
+<p>Zatím však nevím jak tam třeba přidat češtinu.</p>
+</div>
+<figure class="align-center">
+<img alt="../_images/multilang.png" class="small" src="../_images/multilang.png" />
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../instalace/index.html">Instalace a základní konfigurace</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Katalog metadat</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hledani.html">Hledání v metadatech</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Editace metadat dle ISO 19115 (ISO 19119)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="validace.html">Validace metadat</a></li>
+</ul>
+</li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="hledani.html" title="Hledání v metadatech"
+              >předchozí</a> |
+            <a href="validace.html" title="Validace metadat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2024 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Instalace a základní konfigurace &#8212; Školení GeoNetwork pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Katalog metadat" href="../metadata/index.html" />
+    <link rel="prev" title="Obsah" href="../index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení GeoNetwork pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../index.html" title="Obsah"
+             accesskey="P">předchozí</a> |
+          <a href="../metadata/index.html" title="Katalog metadat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="instalace-a-zakladni-konfigurace">
+<h1>Instalace a základní konfigurace<a class="headerlink" href="#instalace-a-zakladni-konfigurace" title="Permalink to this heading">¶</a></h1>
+<p>Instalace je možná pomocí instalátoru, což je pro účely školení
+nejvhodnější forma. Instalace vyžaduje JRE (<a class="reference external" href="https://en.wikipedia.org/wiki/Java virtual machine">Java
+virtual machine</a>) verze 1.8. Pokud chce uživatel provádět i zásahy do
+programového kódu na úrovni tříd jazyka Java potřebuje JDK
+(<a class="reference external" href="https://en.wikipedia.org/wiki/Java Development Kit">Java Development Kit</a>) verze 1.8. Většina zásahů však
+nevyžaduje programování s využitím jazyka <a class="reference external" href="https://cs.wikipedia.org/wiki/Java (programovací jazyk)">Java</a>, ale s využitími zejména jazyků
+<a class="reference external" href="https://cs.wikipedia.org/wiki/XML">XML</a> a <a class="reference external" href="https://cs.wikipedia.org/wiki/XSLT">XSLT</a>.  Instalace je možná také s
+využitím archiv <a class="reference external" href="https://cs.wikipedia.org/wiki/WAR (file format)">WAR</a>, zde je však
+nutná existence (instalace) servlet kontejneru
+např. <a class="reference external" href="https://cs.wikipedia.org/wiki/Apache Tomcat">Apache Tomcat</a> nebo <a class="reference external" href="https://en.wikipedia.org/wiki/JBoss Enterprise Application Platform">JBoss</a>. Instalace je také možná ze
+zdrojových kódů. Samotná instalace je poměrně triviální, ale může se
+na některých konfiguracích vyskytnout několik problémů, např. s
+alokací paměti. V rámci instalace je možní instalovat i integrovaný
+GeoServer (viz školení <a class="reference external" href="https://gismentors.github.io/geoserver-zacatecnik">GeoServer pro začátečníky</a>). V rámci instalace je možné přidat podporu
+pro <a class="reference external" href="https://cs.wikipedia.org/wiki/INSPIRE">INSPIRE</a> a pod. Konfigurace pak zahrnuje zejména
+instalaci šablon pro editaci metadat a vytvoření uživatelů a skupin
+uživatelů a nastavení přístupových práv. Dále je vhodné v základní
+konfiguraci nastavit metadata na úrovni popisu katalogu.</p>
+<section id="stazeni-a-instalace">
+<h2>Stažení a instalace<a class="headerlink" href="#stazeni-a-instalace" title="Permalink to this heading">¶</a></h2>
+<figure class="align-center" id="id1">
+<img alt="../_images/stazeni.png" src="../_images/stazeni.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 1 </span><span class="caption-text">Stažení GeoNetwork OpenSource.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<img alt="../_images/spusteni-instalace.png" src="../_images/spusteni-instalace.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 2 </span><span class="caption-text">Spuštění instalace z příkazové řádky.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../_images/instalace-dir.png" src="../_images/instalace-dir.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 3 </span><span class="caption-text">Instalace, volba adresáře.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<img alt="../_images/instalace-balicky.png" src="../_images/instalace-balicky.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 4 </span><span class="caption-text">Dokončení instalace, volba podpory.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="podpora-inspire">
+<h2>Podpora INSPIRE<a class="headerlink" href="#podpora-inspire" title="Permalink to this heading">¶</a></h2>
+<p>Balík INSPIRE obsahuje číselníky. Po ověření instalace se zdá, že
+balík obsahuje i schematron pro validaci. Ale např. šablona pro službu
+dle <a class="reference external" href="https://cs.wikipedia.org/wiki/INSPIRE">INSPIRE</a> (Infrastructure for Spatial Information in
+the European Community) je součástí Core instalace, tj. přímo v jádru
+systému. Tento balíček jej aktivuje.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Více o INSPIRE v rámci školení <a class="reference external" href="https://gismentors.github.io/open-source-gis/standardy/inspire.html">Úvod do GIS</a>.</p>
+</div>
+<section id="problemy-s-instalaci">
+<h3>Problémy s instalací<a class="headerlink" href="#problemy-s-instalaci" title="Permalink to this heading">¶</a></h3>
+<figure class="align-center" id="id5">
+<img alt="../_images/inspire-0.png" src="../_images/inspire-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 5 </span><span class="caption-text">V první fázi obvykle problémy nebývají.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<img alt="../_images/inspire-1.png" src="../_images/inspire-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 6 </span><span class="caption-text">Po třetí fázi se někdy instalátor zasekne, ale to obvykle nevadí,
+stačí okno zavřít.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="spusteni">
+<h2>Spuštění<a class="headerlink" href="#spusteni" title="Permalink to this heading">¶</a></h2>
+<p>Spuštění se realizuje přes <code class="docutils literal notranslate"><span class="pre">bin/startup.bat</span></code> (startup.sh) soubor.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/spusteni-0.png" src="../_images/spusteni-0.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 7 </span><span class="caption-text">Spuštění GeoNetwork.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokud start skončí tak jako na následujícím obrázku je velká šance, že
+GeoNetwork běží. Hledejte <a class="reference external" href="mailto:SelectChannelConnector&#37;&#52;&#48;0&#46;0&#46;0&#46;0">SelectChannelConnector<span>&#64;</span>0<span>&#46;</span>0<span>&#46;</span>0<span>&#46;</span>0</a>:8080</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/spusteni-1.png" src="../_images/spusteni-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 8 </span><span class="caption-text">Běžící instalace GeoNetwork.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="address-in-use">
+<h3>Address in use<a class="headerlink" href="#address-in-use" title="Permalink to this heading">¶</a></h3>
+<p>Obvyklou chybou při startu je nemožnost naslouchat na portu 8080. V
+takovém případě je potřeba GeoNetwork resp. Jetty kontejner
+přesměrovat na jiný port. Toto se realizuje v souboru
+<code class="docutils literal notranslate"><span class="pre">jetty/etc/jetty-http.xml</span></code> přepsáním čísla 8080 na jiné číslo
+např. 9080.</p>
+</section>
+</section>
+<section id="pristup-z-weboveho-prohlizece">
+<h2>Přístup z webového prohlížeče<a class="headerlink" href="#pristup-z-weboveho-prohlizece" title="Permalink to this heading">¶</a></h2>
+<p>Zadáním adresy <em>http://localhost:8080/geonetwork/</em> by se mělo aktivovat
+webové GUI pro GeoNetwork.</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/web-gui.png" src="../_images/web-gui.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 9 </span><span class="caption-text">Úvodní stránka webového GUI.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="admin-konzole">
+<h3>Admin konzole<a class="headerlink" href="#admin-konzole" title="Permalink to this heading">¶</a></h3>
+<p>Pro aktivaci admin konzole je nutné se přihlásit. Uživatel je <cite>admin</cite> a
+heslo je <cite>admin</cite>.</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/web-gui-menu.png" src="../_images/web-gui-menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 10 </span><span class="caption-text">Konzole je dostupná v hlavním menu.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id11">
+<img alt="../_images/web-gui-admin.png" src="../_images/web-gui-admin.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 11 </span><span class="caption-text">Konzole administrátora.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="sablony">
+<h2>Šablony<a class="headerlink" href="#sablony" title="Permalink to this heading">¶</a></h2>
+<p>K dispozici je několik šablon pro editaci metadat. Pěkné na GeoNetwork
+je, že každý záznam se může stát také šablonou, ale musí vycházet z
+jiné šablony. Vytvoření úplně nové šablony nevycházející z již
+existující šablony je možné, ale nikoli triviální.</p>
+<section id="instalace-sablon-a-prikladu">
+<h3>Instalace šablon a příkladů<a class="headerlink" href="#instalace-sablon-a-prikladu" title="Permalink to this heading">¶</a></h3>
+<figure class="align-center">
+<img alt="../_images/sablony-instalace-0.png" src="../_images/sablony-instalace-0.png" />
+</figure>
+<figure class="align-center" id="id12">
+<img alt="../_images/sablony-instalace-1.png" src="../_images/sablony-instalace-1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 12 </span><span class="caption-text">Seznam dostupných šablon k instalaci.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="dataset">
+<h3>Dataset<a class="headerlink" href="#dataset" title="Permalink to this heading">¶</a></h3>
+<figure class="align-center">
+<img alt="../_images/sablony-dataset.png" class="small" src="../_images/sablony-dataset.png" />
+</figure>
+</section>
+<section id="feature-catalog">
+<h3>Feature catalog<a class="headerlink" href="#feature-catalog" title="Permalink to this heading">¶</a></h3>
+<p>K dispozici pouze jedna šablona pro tvorbu katalogu geoprvků.</p>
+</section>
+<section id="map">
+<h3>Map<a class="headerlink" href="#map" title="Permalink to this heading">¶</a></h3>
+<p>K dispozici pouze jedna šablona pro tvorbu metadat mapy.</p>
+</section>
+<section id="service">
+<h3>Service<a class="headerlink" href="#service" title="Permalink to this heading">¶</a></h3>
+<p>K dispozici jsou dvě šablony. Šablona INSPIRE SDS umožňuje výběr dle
+klasifikace INSPIRE a zadání výsledku conformance testu. Druhá šablona
+je základní pro ISO 19119/19139.</p>
+</section>
+<section id="others">
+<h3>Others<a class="headerlink" href="#others" title="Permalink to this heading">¶</a></h3>
+<p>Další šablony jsou pro standard <a class="reference external" href="https://cs.wikipedia.org/wiki/Dublin Core">Dublin Core</a>, kterým je
+možné popsat obecný zdroj.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instalace a základní konfigurace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#stazeni-a-instalace">Stažení a instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#podpora-inspire">Podpora INSPIRE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#spusteni">Spuštění</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pristup-z-weboveho-prohlizece">Přístup z webového prohlížeče</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sablony">Šablony</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../metadata/index.html">Katalog metadat</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../index.html" title="Obsah"
+              >předchozí</a> |
+            <a href="../metadata/index.html" title="Katalog metadat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2024 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
