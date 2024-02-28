@@ -1,7 +1,7 @@
 Školení GeoNetwork pro začátečníky
 =================================
 
-http://training.gismentors.eu/geonetwork-zacatecnik
+https://gismentors.github.io/geonetwork-zacatecnik/
 
 Licence
 -------
